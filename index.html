@@ -1,0 +1,178 @@
+<html ng-app="happyislet">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>快乐小岛</title>
+        <link href="css/ionic.css" rel="stylesheet">
+        <script src="js/ionic.bundle.min.js"></script>
+    </head>
+ 
+        
+         <script type="text/javascript">
+         var app = angular.module('happyislet', ['ionic']);
+         app.controller( 'technicalCtrl',['$scope','$ionicPopover','$timeout',function($scope,$ionicPopover,$timeout){
+
+          $scope.popover = $ionicPopover.fromTemplateUrl('my-popover.html', {
+            scope: $scope
+          });
+    			 $ionicPopover.fromTemplateUrl('templates/technical.html', {
+    				    scope: $scope
+    				  }).then(function(popover) {
+    				    $scope.popover = popover;
+    				  });
+
+          $scope.openPopover = function($event) {
+            $scope.popover.show($event);
+          };
+          $scope.closePopover = function() {
+            $scope.popover.hide();
+          };
+          // 清除浮动框
+          $scope.$on('$destroy', function() {
+            $scope.popover.remove();
+          });
+          // 在隐藏浮动框后执行
+          $scope.$on('popover.hidden', function() {
+            // 执行代码
+          });
+          // 移除浮动框后执行
+          $scope.$on('popover.removed', function() {
+            // 执行代码
+          });
+
+        }  ]);
+        app.controller( 'literatureCtrl',['$scope','$ionicPopover','$timeout',function($scope,$ionicPopover,$timeout){
+
+            $scope.popover = $ionicPopover.fromTemplateUrl('my-popover.html', {
+              scope: $scope
+            });
+      			 $ionicPopover.fromTemplateUrl('templates/literature.html', {
+      				    scope: $scope
+      				  }).then(function(popover) {
+      				    $scope.popover = popover;
+      				  });
+
+            $scope.openPopover = function($event) {
+              $scope.popover.show($event);
+            };
+            $scope.closePopover = function() {
+              $scope.popover.hide();
+            };
+            // 清除浮动框
+            $scope.$on('$destroy', function() {
+              $scope.popover.remove();
+            });
+            // 在隐藏浮动框后执行
+            $scope.$on('popover.hidden', function() {
+              // 执行代码
+            });
+            // 移除浮动框后执行
+            $scope.$on('popover.removed', function() {
+              // 执行代码
+            });
+
+          }]);
+        app.controller( 'artCtrl',['$scope','$ionicPopover','$timeout',function($scope,$ionicPopover,$timeout){
+
+            $scope.popover = $ionicPopover.fromTemplateUrl('my-popover.html', {
+              scope: $scope
+            });
+      			 $ionicPopover.fromTemplateUrl('templates/art.html', {
+      				    scope: $scope
+      				  }).then(function(popover) {
+      				    $scope.popover = popover;
+      				  });
+      				 
+
+
+            $scope.openPopover = function($event) {
+              $scope.popover.show($event);
+            };
+            $scope.closePopover = function() {
+              $scope.popover.hide();
+            };
+            // 清除浮动框
+            $scope.$on('$destroy', function() {
+              $scope.popover.remove();
+            });
+            // 在隐藏浮动框后执行
+            $scope.$on('popover.hidden', function() {
+              // 执行代码
+            });
+            // 移除浮动框后执行
+            $scope.$on('popover.removed', function() {
+              // 执行代码
+            });
+          }]);
+        app.controller( 'heartsiteCtrl',['$scope','$ionicPopover','$timeout',function($scope,$ionicPopover,$timeout){
+
+            $scope.popover = $ionicPopover.fromTemplateUrl('my-popover.html', {
+              scope: $scope
+            });
+      			 $ionicPopover.fromTemplateUrl('templates/heartsite.html', {
+      				    scope: $scope
+      				  }).then(function(popover) {
+      				    $scope.popover = popover;
+      				  });
+      				 
+
+
+            $scope.openPopover = function($event) {
+              $scope.popover.show($event);
+            };
+            $scope.closePopover = function() {
+              $scope.popover.hide();
+            };
+            // 清除浮动框
+            $scope.$on('$destroy', function() {
+              $scope.popover.remove();
+            });
+            // 在隐藏浮动框后执行
+            $scope.$on('popover.hidden', function() {
+              // 执行代码
+            });
+            // 移除浮动框后执行
+            $scope.$on('popover.removed', function() {
+              // 执行代码
+            });
+
+          }
+        
+        ]);
+      </script>
+      <!-- 
+        <script type="text/javascript">
+        angular.module('happyislet', ['ionic'])
+       ])
+      </script>
+       <script type="text/javascript">
+        angular.module('happyislet', ['ionic'])
+        ])
+      </script>
+      <script type="text/javascript">
+        angular.module('happyislet', ['ionic'])
+       ])
+      </script> -->
+<body ng-app="happyislet" >
+    
+  
+<div id="artical"></div>
+
+    <div class="tabs">
+      <a class="tab-item" id="tenichal" href="#" ng-controller="technicalCtrl"  ng-click="openPopover($event)">
+      
+        技术论坛
+      </a>
+      <a class="tab-item" href="#" ng-controller="literatureCtrl" ng-click="openPopover($event)">
+        文学殿堂
+      </a>
+  <a class="tab-item" href="#" ng-controller="artCtrl"  ng-click="openPopover($event)">
+       艺术欣赏
+      </a>
+      <a class="tab-item" href="#" ng-controller="heartsiteCtrl"  ng-click="openPopover($event)">
+        心灵驿站
+      </a>
+
+    </div>
+  </body>
+</html>
